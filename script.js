@@ -42,8 +42,10 @@ function generatePassword() {
 
   var specialCharacters = confirm("Do you wish to include special characters?");
   console.log(specialCharacters);
-
-
+  if (lowercase === false && uppercase === false && numbers === false && specialCharacters === false)
+   { 
+     alert("You must select at least one character.");
+  }
 
   return "This will be replaced by my password generator.";
 }
