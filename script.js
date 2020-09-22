@@ -28,6 +28,9 @@ function writePassword() {
 function generatePassword() {
   var passwordLength = prompt("how long should your password be?")
   console.log(passwordLength);
+if (passwordLength < 8 || passwordLength > 128){
+  alert("Please choose a number between 8 and 128.");
+}
   return "This will be replaced by my password generator.";
 }
 
