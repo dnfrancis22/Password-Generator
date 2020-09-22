@@ -7,7 +7,10 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+}
 
+function generatePassword() {
+  return "This will be replaced by my password generator.";
 }
 
 // Add event listener to generate button
