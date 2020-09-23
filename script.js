@@ -57,6 +57,25 @@ if (
 ) {
   alert("You must select at least one character type.");
 }
+var lowercase = confirm("Do you wish to include lowercase letters?");
+console.log(lowercase);
+
+var uppercase = confirm("Do you wish to include uppercase letters?");
+console.log(uppercase);
+
+var numbers = confirm("Do you wish to include numbers?");
+console.log(numbers);
+
+var specialCharacters = confirm("Do you wish to include special characters?");
+console.log(specialCharacters);
+if (
+  lowercase === false &&
+  uppercase === false &&
+  numbers === false &&
+  specialCharacters === false
+) {
+  alert("You must select at least one character type.");
+}
 
 var userChoice = []
 
