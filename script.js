@@ -16,37 +16,46 @@
 // ```
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var lowercaseLetter = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numerals = "0123456789";
+var specialChar = "!@#$%^&*()_";
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
 
   passwordText.value = password;
 }
 
 function generatePassword() {
   var passwordLength = prompt("how long should your password be?");
-  console.log(passwordLength);
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert("Please choose a number between 8 and 128.");
-  }
-  var lowercase = confirm("Do you wish to include lowercase letters?");
-  console.log(lowercase);
+console.log(passwordLength);
+if (passwordLength < 8 || passwordLength > 128) {
+  alert("Please choose a number between 8 and 128.");
+}
+var lowercase = confirm("Do you wish to include lowercase letters?");
+console.log(lowercase);
 
-  var uppercase = confirm("Do you wish to include uppercase letters?");
-  console.log(uppercase);
+var uppercase = confirm("Do you wish to include uppercase letters?");
+console.log(uppercase);
 
-  var numbers = confirm("Do you wish to include numbers?");
-  console.log(numbers);
+var numbers = confirm("Do you wish to include numbers?");
+console.log(numbers);
 
-  var specialCharacters = confirm("Do you wish to include special characters?");
-  console.log(specialCharacters);
-  if (lowercase === false && uppercase === false && numbers === false && specialCharacters === false)
-   { 
-     alert("You must select at least one character.");
-  }
-
+var specialCharacters = confirm("Do you wish to include special characters?");
+console.log(specialCharacters);
+if (
+  lowercase === false &&
+  uppercase === false &&
+  numbers === false &&
+  specialCharacters === false
+) {
+  alert("You must select at least one character type.");
+}
   return "This will be replaced by my password generator.";
 }
 
