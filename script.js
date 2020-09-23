@@ -74,7 +74,18 @@ if (specialCharacters === true) {
 
 console.log (userChoice);
 
-  return "This will be replaced by my password generator.";
+var randomPassword = ""
+ 
+
+for (var i = 0; i < passwordLength; i++) {
+  randomPassword = randomPassword + userChoice[Math.floor(Math.random() * userChoice.length)]; 
+}
+
+
+
+return randomPassword;
+
+
 }
 
 // Add event listener to generate button
