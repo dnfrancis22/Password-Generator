@@ -56,6 +56,24 @@ if (
 ) {
   alert("You must select at least one character type.");
 }
+
+var userChoice = []
+
+if (lowercase === true) {
+  userChoice += lowercaseLetter;
+}
+if (uppercase === true) {
+  userChoice += uppercaseLetter;
+}
+if (numbers === true) {
+  userChoice += numerals;
+}
+if (specialCharacters === true) {
+  userChoice += specialChar;
+}
+
+console.log (userChoice);
+
   return "This will be replaced by my password generator.";
 }
 
