@@ -32,10 +32,11 @@ function writePassword() {
 }
 
 function generatePassword() {
-  var passwordLength = prompt("how long should your password be?");
+  var passwordLength = prompt("Password Length? Choose a number between 8 and 128");
 console.log(passwordLength);
 if (passwordLength < 8 || passwordLength > 128) {
   alert("Please choose a number between 8 and 128.");
+  var passwordLength = prompt("Password Length? Choose a number between 8 and 128");
 }
 var lowercase = confirm("Do you wish to include lowercase letters?");
 console.log(lowercase);
